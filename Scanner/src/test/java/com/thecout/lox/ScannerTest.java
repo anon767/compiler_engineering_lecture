@@ -1,14 +1,11 @@
-package test.java;
+package com.thecout.lox;
 
-import com.thecout.lox.Scanner;
-import com.thecout.lox.Token;
-import com.thecout.lox.TokenType;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class ScannerTest {
