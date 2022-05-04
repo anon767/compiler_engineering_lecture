@@ -16,7 +16,7 @@
 | whileStmt      | →   | "while" "(" expression ")" statement ;                                                                                      |
 | block          | →   | "{" declaration "}" ;                                                                                                       |
 | expression     | →   | assignment ;                                                                                                                |
-| assignment     | →   | IDENTIFIER "=" assignment<br/>logic_or ;                                                                       |
+| assignment     | →   | IDENTIFIER "=" assignment &#x7c; logic_or ;                                                                       |
 | logic_or       | →   | logic_and ( "or" logic_and )* ;                                                                                             |
 | logic_and      | →   | equality ( "and" equality )* ;                                                                                              |
 | equality       | →   | comparison ( ( "!=" &#x7c; "==" ) comparison )* ;                                                                           |
