@@ -41,7 +41,7 @@ public class Parser {
 
     private Stmt declaration() {
         try {
-            if (match(FUN)) return function("function");
+            if (match(FUN)) return function();
             if (match(VAR)) return varDeclaration();
 
             return statement();
@@ -100,7 +100,7 @@ public class Parser {
         return null;
     }
 
-    private Function function(String kind) {
+    private Function function() {
         return null;
     }
 
