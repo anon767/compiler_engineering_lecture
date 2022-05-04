@@ -5,5 +5,11 @@ The language is based on JLox from crafting interpreters
 
 ## Assignment
 
-1. Complete the Scanner and see if the ScannerTest succeeds
-2. Complete the Parser and see if the ParserTest succeeds
+### Scanner
+Complete the Scanner and see if the ScannerTest succeeds either with Scanner Tables or RegExes
+
+### Parser
+Complete the Parser using the LL(1) Recursive Descent Parser from the lecture.
+Beware: A FOR-Loop ist just syntactical sugar for a WHILE-Loop :)
+
+Solution is accepted when the Tests succeed.
