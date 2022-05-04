@@ -16,14 +16,13 @@
 | whileStmt      | →   | "while" "(" expression ")" statement ;                                                                                      |
 | block          | →   | "{" declaration "}" ;                                                                                                       |
 | expression     | →   | assignment ;                                                                                                                |
-| assignment     | →   | (call ".")? IDENTIFIER "=" assignment<br/>logic_or ;                                                                       |
+| assignment     | →   | IDENTIFIER "=" assignment<br/>logic_or ;                                                                       |
 | logic_or       | →   | logic_and ( "or" logic_and )* ;                                                                                             |
 | logic_and      | →   | equality ( "and" equality )* ;                                                                                              |
 | equality       | →   | comparison ( ( "!=" &#x7c; "==" ) comparison )* ;                                                                           |
 | comparison     | →   | addition ( ( ">" &#x7c; ">=" &#x7c; "<" &#x7c; "<=" ) addition )* ;                                                         |
 | addition       | →   | multiplication ( ( "-" &#x7c; "+" ) multiplication )* ;                                                                     |
-| multiplication | →   | unary ( ( "/" &#x7c; "*" )
-unary )* ;                                                                                       |
+| multiplication | →   | unary ( ( "/" &#x7c; "*" ) unary )* ;                                                                                       |
 | unary          | →   | ( "!" &#x7c; "-" ) unary<br/>call ;                                                                                         |
 | call           | →   | IDENTIFIER "(" arguments? ")" ;                                                                     |
 | arguments      | →   | expression ( "," expression )* ;                                                                                            |
