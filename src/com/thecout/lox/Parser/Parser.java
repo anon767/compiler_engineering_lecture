@@ -148,10 +148,6 @@ public class Parser {
         return null;
     }
 
-    private Expr finishCall(Expr callee) {
-        return null;
-    }
-
     private Expr call() {
         return null;
     }
