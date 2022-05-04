@@ -22,7 +22,7 @@
 | equality       | →   | comparison ( ( "!=" &#x7c; "==" ) comparison )* ;                                                                           |
 | comparison     | →   | addition ( ( ">" &#x7c; ">=" &#x7c; "<" &#x7c; "<=" ) addition )* ;                                                         |
 | addition       | →   | multiplication ( ( "-" &#x7c; "+" ) multiplication )* ;                                                                     |
-| multiplication | →   | unary ( ( "/" &#x7c; "*" ) unary )* ;                                                                                       |
+| multiplication | →   | unary ( ( "/" &#x7c; "\*" ) unary )\* ;                                                                                       |
 | unary          | →   | ( "!" &#x7c; "-" ) unary<br/>call ;                                                                                         |
 | call           | →   | IDENTIFIER "(" arguments? ")" ;                                                                     |
 | arguments      | →   | expression ( "," expression )* ;                                                                                            |
