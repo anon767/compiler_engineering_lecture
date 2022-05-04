@@ -25,6 +25,6 @@
 | multiplication | →   | unary ( ( "/" &#x7c; "*" )
 unary )* ;                                                                                       |
 | unary          | →   | ( "!" &#x7c; "-" ) unary<br/>call ;                                                                                         |
-| call           | →   | primary "(" arguments? ")" ;                                                                     |
+| call           | →   | IDENTIFIER "(" arguments? ")" ;                                                                     |
 | arguments      | →   | expression ( "," expression )* ;                                                                                            |
 | primary        | →   | "true"<br/> "false"<br/> "nil"<br/> NUMBER<br/> STRING<br/> IDENTIFIER<br/> "(" expression ")"<br/> "super" "." IDENTIFIER; |
