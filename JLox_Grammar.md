@@ -24,6 +24,6 @@
 | addition       | →   | multiplication ( ( "-" &#x7c; "+" ) multiplication )* ;                                                                     |
 | multiplication | →   | unary ( ( "/" &#x7c; "\*" ) unary )\* ;                                                                                       |
 | unary          | →   | ( "!" &#x7c; "-" ) unary &#x7c; call ;                                                                                         |
-| call           | →   | IDENTIFIER "(" arguments? ")" ;                                                                     |
+| call           | →   | IDENTIFIER "(" arguments? ")" | IDENTIFIER ;                                                                     |
 | arguments      | →   | expression ( "," expression )* ;                                                                                            |
 | primary        | →   | "true" &#x7c; "false" &#x7c; "nil" &#x7c; NUMBER &#x7c; STRING &#x7c; IDENTIFIER &#x7c; "(" expression ")"; |
