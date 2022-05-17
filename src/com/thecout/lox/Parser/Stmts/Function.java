@@ -24,4 +24,9 @@ public class Function extends Stmt {
         String body = this.body.stream().map(Stmt::print).collect(Collectors.joining("\n"));
         return "(Function %s %s )".formatted(params, body);
     }
+
+    @Override
+    public <R> R accept(StmtVisitor<R> stmtVisitor) {
+        return null;
+    }
 }
