@@ -3,23 +3,17 @@ package com.thecout.lox.Traversal;
 
 import com.thecout.lox.Parser.Expr.*;
 import com.thecout.lox.Parser.Stmts.*;
-import com.thecout.lox.Token;
-import com.thecout.lox.TokenType;
 import com.thecout.lox.Traversal.InterpreterUtils.Environment;
 import com.thecout.lox.Traversal.InterpreterUtils.LoxCallable;
 import com.thecout.lox.Traversal.InterpreterUtils.RuntimeError;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Interpreter implements ExprVisitor<Object>,
         StmtVisitor<Void> {
 
     public final Environment globals = new Environment();
     private Environment environment = globals;
-
-
 
 
     public Interpreter() {
@@ -107,12 +101,19 @@ public class Interpreter implements ExprVisitor<Object>,
 
     @Override
     public Object visitUnaryExpr(Unary expr) {
+        Object right = this.evaluate(expr.right);
+        switch (expr.operator.type) {
+            case BANG:
+                return !(boolean) right;
+            case MINUS:
+                return -(double) right;
+        }
         return null;
     }
 
     @Override
     public Object visitVariableExpr(Variable expr) {
-        return null;
+        return environment.get(expr.name);
     }
 
     @Override

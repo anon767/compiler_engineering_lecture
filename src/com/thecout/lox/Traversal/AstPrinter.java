@@ -15,7 +15,7 @@ public class AstPrinter implements ExprVisitor<String>, StmtVisitor<String> {
 
     @Override
     public String visitAssignExpr(Assign expr) {
-        return null;
+        return ("%s%s%s").formatted(expr.name, "=", expr.value);
     }
 
     @Override
@@ -50,7 +50,7 @@ public class AstPrinter implements ExprVisitor<String>, StmtVisitor<String> {
 
     @Override
     public String visitVariableExpr(Variable expr) {
-        return null;
+        return expr.name.lexeme;
     }
 
     @Override
